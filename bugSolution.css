@@ -1,0 +1,24 @@
+/* bugSolution.css */
+
+/* Consistent unit usage. Convert percentages to pixels where necessary to avoid ambiguity. */
+.container {
+  width: calc(50% - 20px);
+  /* Improved: Ensures consistent calculations by converting percentage to an appropriate pixel value  */
+  width: calc(50vw - 20px); /* Use vw for viewport width based calculations*/
+}
+
+/* Avoid complex expressions within media queries. Break down the conditions into smaller, easier-to-manage units. */
+@media (min-width: 768px) {
+  .element {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .element {
+    width: 400px; 
+  }
+}
+
+/* Instead of:
+@media (min-width: 768px) and (max-width:1200px){ ... } */
